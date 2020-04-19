@@ -34,9 +34,9 @@ h3{
 }
 .main2{
   padding-top: 20px;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: 'Roboto', sans-serif;
-  text-shadow: 2px 2px 4px #000000;
+
   text-align: center;
 }
 .womanimg{
@@ -45,9 +45,11 @@ h3{
 
 }
 .faviconimg{
-  width: 10%;
+  max-width: 90%;
+  height : auto;
 
 }
+
 /* navigation bar */
 .navbar{
   color: #FFA34D;
