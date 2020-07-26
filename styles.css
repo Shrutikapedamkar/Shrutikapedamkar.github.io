@@ -78,7 +78,13 @@ i{
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
+  letter-spacing: 8px;
+  font-weight: 400;
   text-align: center;
+
+}
+.header-buttons a{
+  animation: resumebutton 3s 1;
 }
 .header-buttons a:hover{
   color: #654ea3;
@@ -95,6 +101,7 @@ i{
 {
   -webkit-filter: drop-shadow(5px 5px 5px #222);
     width: 100%;
+    animation: laptopimage 3s 1;
 }
 .intro{
     margin-top: 100px;
@@ -103,12 +110,17 @@ i{
 }
 .intro h1,h2{
   font-size: 3rem;
-  font-family: 'Lobster', cursive;}
+  font-family: 'Lobster', cursive;
+  }
 .intro h3{
-  font-size: 2rem;  
+  font-size: 1.5rem;  
   font-family: 'Comfortaa', cursive;
 }
 /**************************ABOUT ME**************************/
+.aboutme{
+  animation: text 3s 1;
+
+}
 .aboutme img{
   justify-content: center;
   align-items: center;
@@ -119,6 +131,9 @@ i{
 .aboutme h1{
   font-family: 'Lobster', cursive;
   color: #606060;
+  animation-duration: 8s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
 
 }
 
@@ -150,7 +165,6 @@ i{
   font-family: 'Lobster', cursive;
   font-size: 3.5rem;
 }
-
 .card{
   transition: 0.4s ease;
   margin-bottom: 20px;
@@ -166,32 +180,19 @@ i{
   padding: 30px!important;
   font-family: 'Comfortaa', cursive;
   color: #606060;
-
-}
-.card-body li{
-  margin: 30px 0;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 1.6;
-  
-}
-
-
-.card:hover .card-footer a{
-  color: #fff;
-  background: #bd59ca;
-  text-decoration: none;
-  box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
 }
 .card:hover{
   transform: translateY(-20px);
   box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
-  color: #fff;
+  color: #fff!important;
   background: #bd59ca;
   text-decoration: none;
 }
-.card:hover .card-header, .card:hover .card-body li{
+.card:hover .card-header{
   color: #bd59ca;
+}
+.card:hover .card-body{
+  color: #fff!important;
 }
 .design-img{
   width: 40%;
@@ -199,7 +200,6 @@ i{
   margin-left: auto;
   margin-right: auto;
 }
-
 /**************************CONTACT**************************/
 
 .contact{
@@ -227,6 +227,7 @@ i{
 .woman{
  width: 110%;
  -webkit-filter: drop-shadow(3px 3px 3px #222);
+ animation: womanimage 3s 1;
 
 }
 .center-div{
@@ -276,10 +277,7 @@ transform: translate(-50%, -50%);
   font-family: 'Lobster', cursive;
   font-size: 4rem;
 }
-
-
-
-
+/***************************MEDIA QUERIES*************************/
 
   @media(max-width: 768px){
     *{
@@ -317,3 +315,46 @@ transform: translate(-50%, -50%);
   margin: 70px 5px 0 5px;
 }
   }
+
+/*******************************KEYFRAMES***********************/
+
+@keyframes text{
+  0%{
+    color: #654ea3;
+    
+  }
+  30%{
+    letter-spacing: 7px;
+    
+  }
+  85%{
+    letter-spacing: 0;
+    
+  }}
+
+  @keyframes laptopimage{
+    0%{
+      margin-left: 500px;
+    }
+    60%{
+      margin-left: 0;
+    }
+  }
+@keyframes resumebutton{
+  0%{
+    margin-left: -500px;
+  }
+  60%{
+    margin-left: 0;
+  }
+}
+@keyframes womanimage{
+  0%{
+    opacity: 0;
+    width: 0%
+  }
+  70%{
+    opacity: 100%;
+    width: 110%;
+  }
+}
